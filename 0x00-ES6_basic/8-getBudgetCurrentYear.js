@@ -1,4 +1,5 @@
-// Rewrite the getBudgetForCurrentYear function to use ES6 computed property names on the budget object
+// Rewrite the getBudgetForCurrentYear function to use ES6 computed property names
+// on the budget object
 
 // function getCurrentYear() {
 //   const date = new Date();
