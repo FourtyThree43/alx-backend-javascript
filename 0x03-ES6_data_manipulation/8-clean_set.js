@@ -1,17 +1,17 @@
 function cleanSet(set, startString) {
-  if (startString.length === 0) {
+  if (typeof startString !== 'string' || startString === '') {
     return '';
   }
 
-  const result = [];
+  let result = '';
 
   for (const item of set) {
-    if (typeof item === 'string' && item.startsWith(startString)) {
-      result.push(item.slice(startString.length));
+    if (item.startsWith(startString)) {
+      result += `${item.slice(startString.length)}-`;
     }
   }
 
-  return result.join('-');
+  return result.slice(0, -1); // remove the trailing '-'
 }
 
 export default cleanSet;
